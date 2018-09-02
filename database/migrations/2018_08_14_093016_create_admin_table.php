@@ -18,7 +18,7 @@ class CreateAdminTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->rememberToken();
+            $table->text('token')->nullable()->comment('jwt token');
             $table->timestamps();
         });
     }

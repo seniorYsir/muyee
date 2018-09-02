@@ -23,6 +23,7 @@ Route::group(['prefix'=>'auth','namespace'=>'Auth'],function(){
 });
 Route::group(['prefix'=>'test','namespace'=>'Test'],function(){
     Route::get('/','TestController@test')->middleware(['auth','permission:test']);
+    Route::get('/user','TestController@index');
 });
 
 Route::prefix('auth')->group(function($router) {

@@ -7,6 +7,7 @@
 
         <title>Laravel</title>
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="stylesheet" type="text/css" href="/css/app.css">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
@@ -14,12 +15,12 @@
     </head>
     <body>
         <!-- vue的挂载点-->
-        <div id='app'>
-
-            <!--使用我们建立的组件-->
-
-            <example></example>
+        <div id="app">
+            <div class="container main">
+                <router-view />
+            </div>
         </div>
+
         <!-- <div id="ipp">
             @{{ message }}
         </div> -->
